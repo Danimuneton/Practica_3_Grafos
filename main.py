@@ -19,7 +19,7 @@ import numpy as np
 
 
 class Nodo(QGraphicsEllipseItem):
-    """Representa un nodo visual en el grafo"""
+    """Nodo visual en el grafo"""
 
     def __init__(self, x, y, radius, id, app):
         super().__init__(-radius, -radius, 2 * radius, 2 * radius)
@@ -49,7 +49,7 @@ class Nodo(QGraphicsEllipseItem):
 
 
 class Arista(QGraphicsLineItem):
-    """Representa una arista visual en el grafo"""
+    """Arista visual en el grafo"""
 
     def __init__(self, nodo1, nodo2, peso, scene):
         super().__init__()
@@ -82,7 +82,7 @@ class AlgoritmoKCaminos:
         self.matriz_pesos = matriz_pesos
         self.n = num_vertices
 
-        # Crear matriz de adyacencia binaria CORRECTAMENTE
+        # Matriz de adyacencia binaria
         self.matriz_adyacencia = []
         for i in range(num_vertices):
             fila = []
@@ -546,3 +546,4 @@ if __name__ == "__main__":
     window = GrafoApp()
     window.show()
     sys.exit(app.exec_())
+
